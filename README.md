@@ -31,7 +31,7 @@ Terraform is an open-source Infrastructure as Code (IaC) tool that allows you to
 4. **Destroy**: Remove all resources managed by Terraform.
 
 ## Getting Started
-To start using Terraform, you need to install it and set up your configuration files with the necessary code. Here's a simple example to define an AWS EC2 instance:
+To start using Terraform, you need to install it and set up your configuration files with the necessary code. Here's a simple example to define an AWS EC2 instance
 
 ```hcl
 provider "aws" {
