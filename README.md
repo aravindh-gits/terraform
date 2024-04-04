@@ -42,3 +42,35 @@ resource "aws_instance" "example" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
 }
+```
+# Terraform Workspaces
+
+## Overview
+Terraform workspaces allow you to manage multiple environments within a single Terraform configuration. Each workspace is an isolated environment with its own state, making it ideal for managing different stages of development such as testing, staging, and production.
+
+## What is a Workspace?
+A workspace in Terraform is a logical environment for managing a set of infrastructure resources. When you create resources using Terraform, they are associated with a workspace. By default, all resources are created in the 'default' workspace.
+
+## Why Use Workspaces?
+Workspaces are useful for:
+- Testing Terraform configurations without affecting production.
+- Managing different deployment stages with the same codebase.
+- Organizing resources by function or team without duplicating code.
+
+## Commands
+- `terraform workspace list`: Lists all existing workspaces.
+- `terraform workspace new [name]`: Creates a new workspace.
+- `terraform workspace select [name]`: Switches to an existing workspace.
+- `terraform workspace delete [name]`: Deletes a workspace (cannot delete 'default').
+
+## Example
+Here's an example of how to create and use a new workspace named 'development':
+
+```hcl
+# Create a new workspace
+terraform workspace new development
+
+# Switch to the new workspace
+terraform workspace select development
+
+# Now, any Terraform apply will only affect the 'development' workspace.
