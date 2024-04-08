@@ -1,7 +1,7 @@
 # Terraform Basics
 
 ## Terraform
-Terraform is an open-source Infrastructure as Code (IaC) tool that allows you to build, change, and version infrastructure efficiently. It uses configuration files to describe the components needed to run an application or your entire datacenter.
+Terraform is an open-source Infrastructure as Code (IaC) tool that allows you to build, change, and version infrastructure efficiently. It uses configuration files to describe the components needed to run an application or your entire datacenter..
 
 ## Core Concepts
 - **Variables**: Key-value pairs used to customize Terraform modules.
